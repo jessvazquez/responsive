@@ -1,2 +1,4 @@
 # responsive
- Pagina responsive hecha con CSS construida con un sistema de rejillas propio a partir de cero.
+ Pagina con HTML y CSS.
+ Esta hecha a partir de un sistema de rejillas responsivo propio desde cero, contenidos en el archivo
+ estilos.css

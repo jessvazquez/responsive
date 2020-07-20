@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    /* box-sizing: border-box; Esto asegura 
+        que el relleno y el borde esten
+        incluidos en el ancho y altura total. */
+    box-sizing: border-box;
+}
+
+
+/*                        Creando sistema de columnas responsive. */
+
+.contenedor {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.fila {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    /* Con esto hacemos que no se mezclen las 
+    filas */
+    clear: both;
+    /* con esto hacemos que los textos no se
+    pongan en cajas que no les corresponden. */
+    display: table;
+}
+
+
+/* Todas las clases que tengan la 
+    palabra col- */
+
+[class*="col-"] {
+    /* para que una caja aparezca a lado de la otra 
+        usamos float. */
+    float: left;
+    /* border: 1px solid red; */
+    padding: 20px;
+}
+
+
+/*                             SECCION 1 */
+
+header #logo {
+    font-family: "Kaushan Script", cursive;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+}
+
+header center p {
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    line-height: 45px;
+    font-size: 19px;
+    color: white;
+}
+
+#icono1 p {
+    background: blue;
+}
+
+#icono2 p {
+    background: green;
+}
+
+#icono3 p {
+    background: red;
+}
+
+
+/*                              Seccion 2 */
+
+nav ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    /* El display: block nos sirve para que la caja no se ajuste
+    al texto unicamente, no tendrian cuerpo. */
+    display: block;
+    background: rgba(100, 0, 255, 1);
+    font-family: "Kaushan Script", cursive;
+    color: white;
+    line-height: 48px;
+}
+
+nav ul li a :hover {
+    background: rgba(100, 0, 255, 0.4);
+}
+
+nav ul li a :active {
+    background: rgba(255, 0, 100, 1);
+}
+
+
+/*                                         Seccion 3 */
+
+#seccion3 center {
+    padding: 20px;
+}
+
+#seccion3 img {
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+#seccion3 h1 {
+    padding: 20px;
+}
+
+#seccion3 p {
+    padding: 10px;
+}
+
+
+/*                          Seccion 4 */
+
+#seccion4 li {
+    padding: 10px;
+    margin: 2px 10px;
+    background: #aaa;
+    list-style: square;
+    list-style-position: inside;
+}
+
+#seccion4 li a {
+    font-family: "Kaushan Script", cursive;
+}
+
+#seccion4 article h1 {
+    font-family: "Kaushan Script", cursive;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+    margin-top: -16px;
+}
+
+#seccion4 article img {
+    float: left;
+    margin-right: 15px;
+}
+
+aside#der h1 {
+    text-align: center;
+    background: rgba(100, 0, 255, 1);
+    color: white;
+    line-height: 43px;
+    margin: 5px 0px;
+}
+
+aside#der input {
+    padding: 10px;
+    margin: 5px 0px;
+    width: 100%;
+    text-align: center;
+    font-family: "Kaushan Script", cursive;
+}
+
+aside#der input[type="email"] {
+    background: url(../img/usuario.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+aside#der input[type="password"] {
+    background: url(../img/password.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+aside#der input[type="submit"] {
+    background: #b17fb1;
+    border: 0;
+}
+
+
+/*                                          Seccion 5 */
+
+#seccion5 {
+    margin-top: 80px;
+    width: 100%;
+    height: 65px;
+    background: blueviolet;
+}
+
+#seccion5 p {
+    text-align: center;
+    color: white;
+}
+
+
+/* Para pantallas de minimo 1200px. */
+
+@media (min-width: 1200px) {
+    .col-lg-12 {
+        width: 100%;
+    }
+    .col-lg-9 {
+        width: 75%;
+    }
+    .col-lg-8 {
+        width: 66.66666667%;
+    }
+    .col-lg-7 {
+        width: 58.33333333%;
+    }
+    .col-lg-5 {
+        width: 41.66666667%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-4 {
+        width: 33.33333333%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-2 {
+        width: 16.66666667%;
+    }
+    .col-lg-1 {
+        width: 8.33333333%;
+    }
+    /*           Escondemos la caja para que no queden espacios vacios. */
+    .col-lg-0 {
+        display: none;
+    }
+}
+
+
+/* Pantallas de minimo 992 px */
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .col-md-12 {
+        width: 100%;
+    }
+    .col-md-11 {
+        width: 91.66666667%;
+    }
+    .col-md-10 {
+        width: 83.33333333%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+    .col-md-7 {
+        width: 58.33333333%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-2 {
+        width: 16.66666667%;
+    }
+    .col-md-1 {
+        width: 8.33333333%;
+    }
+    .col-md-0 {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .col-sm-12 {
+        width: 100%;
+    }
+    .col-sm-11 {
+        width: 91.66666667%;
+    }
+    .col-sm-10 {
+        width: 83.33333333%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-8 {
+        width: 66.66666667%;
+    }
+    .col-sm-7 {
+        width: 58.33333333%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-2 {
+        width: 16.66666667%;
+    }
+    .col-sm-1 {
+        width: 8.33333333%;
+    }
+    .col-sm-0 {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-xs-12 {
+        width: 100%;
+    }
+    .col-xs-11 {
+        width: 91.66666667%;
+    }
+    .col-xs-10 {
+        width: 83.33333333%;
+    }
+    .col-xs-9 {
+        width: 75%;
+    }
+    .col-xs-8 {
+        width: 66.66666667%;
+    }
+    .col-xs-7 {
+        width: 58.33333333%;
+    }
+    .col-xs-6 {
+        width: 50%;
+    }
+    .col-xs-5 {
+        width: 41.66666667%;
+    }
+    .col-xs-4 {
+        width: 33.33333333%;
+    }
+    .col-xs-3 {
+        width: 25%;
+    }
+    .col-xs-2 {
+        width: 16.66666667%;
+    }
+    .col-xs-1 {
+        width: 8.33333333%;
+    }
+    .col-xs-0 {
+        display: none;
+    }
+}
